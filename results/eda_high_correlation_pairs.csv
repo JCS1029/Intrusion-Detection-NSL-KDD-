@@ -1,0 +1,14 @@
+feature_a,feature_b,pearson_r
+num_compromised,num_root,0.9988
+serror_rate,srv_serror_rate,0.9933
+rerror_rate,srv_rerror_rate,0.989
+srv_serror_rate,dst_host_srv_serror_rate,0.9863
+dst_host_serror_rate,dst_host_srv_serror_rate,0.9851
+serror_rate,dst_host_srv_serror_rate,0.9811
+serror_rate,dst_host_serror_rate,0.9794
+srv_serror_rate,dst_host_serror_rate,0.9776
+srv_rerror_rate,dst_host_srv_rerror_rate,0.9702
+rerror_rate,dst_host_srv_rerror_rate,0.9644
+rerror_rate,dst_host_rerror_rate,0.9267
+dst_host_rerror_rate,dst_host_srv_rerror_rate,0.9247
+srv_rerror_rate,dst_host_rerror_rate,0.9178

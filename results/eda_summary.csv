@@ -1,0 +1,2 @@
+train_rows,test_rows,features,constant_columns,duplicate_pairs,attack_rate_train,attack_rate_test
+125973,22544,41,['num_outbound_cmds'],0,0.4654171925730117,0.5692423704755145

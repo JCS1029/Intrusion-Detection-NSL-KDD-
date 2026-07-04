@@ -1,0 +1,17 @@
+{
+  "encoding": "train_only",
+  "models": [
+    "NB",
+    "LR",
+    "LDA",
+    "RF",
+    "AE+LR"
+  ],
+  "smote_regimes": [
+    false,
+    true
+  ],
+  "random_state": 42,
+  "models_dir": "C:\\Users\\User\\Desktop\\data science in cyber\\results\\models",
+  "predictions_dir": "C:\\Users\\User\\Desktop\\data science in cyber\\results\\predictions"
+}

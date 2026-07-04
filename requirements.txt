@@ -1,0 +1,17 @@
+# Core data science
+pandas>=2.2.0,<3
+numpy>=2.0.0,<3
+scikit-learn>=1.5.0,<2
+imbalanced-learn>=0.12.0,<1
+
+# Deep learning (AE+LR hybrid from paper)
+tensorflow>=2.16.0,<3
+
+# Visualization & notebook
+matplotlib>=3.8.0,<4
+seaborn>=0.13.0,<1
+jupyter>=1.0.0,<2
+ipykernel>=6.29.0,<7
+
+# Utilities
+tqdm>=4.66.0,<5

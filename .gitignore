@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+ENV/
+*.egg-info/
+dist/
+build/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Data (do not commit raw datasets)
+data/raw/*.txt
+data/raw/*.csv
+data/raw/*.arff
+!data/raw/README.md
+
+# Generated artifacts
+results/models/
+results/predictions/
+*.pkl
+*.h5
+*.keras
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# Logs
+*.log
+
+# Environment secrets
+.env

@@ -1,0 +1,5 @@
+attack_family,attacks_in_test,detected,missed_fn,recall
+DOS,7458,1372,6086,0.184
+PROBE,2421,516,1905,0.2131
+R2L,2887,9,2878,0.0031
+U2R,67,0,67,0.0

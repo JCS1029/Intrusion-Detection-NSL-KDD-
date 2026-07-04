@@ -1,0 +1,6 @@
+model,false_positives,false_negatives
+AE+LR,812,5437
+LDA,667,4704
+LR,730,5266
+NB,63,10936
+RF,271,4985
