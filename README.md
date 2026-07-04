@@ -32,6 +32,17 @@ data-science-in-cyber/
 └── vendor/                       # upstream author repo (reference only)
 ```
 
+## Submission
+
+| Item | Value |
+|------|-------|
+| **Repository** | https://github.com/JCS1029/Intrusion-Detection-NSL-KDD- |
+| **Release tag** | `v1.0-submission` |
+| **QA checklist** | [`docs/submission_checklist.md`](docs/submission_checklist.md) |
+| **Deadline** | Friday, July 10, 2026, 23:59 |
+
+Email the repository URL to the examiner per course instructions in `haifaUEX.pdf`.
+
 ## Quick start
 
 ### 1. Clone and enter the project

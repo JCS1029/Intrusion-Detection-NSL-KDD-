@@ -6,7 +6,7 @@ Generated: 2026-07-04 18:49 UTC
 
 | Criterion | Status |
 |-----------|--------|
-| Public GitHub repo with all required artifacts | pending push |
+| Public GitHub repo with all required artifacts | PASS |
 | Notebook runs top-to-bottom after data download | PASS |
 | NSL-KDD LR reproduced (±0.02) or deviation explained | PASS |
 | ≥2 models with full metric suite (MCC, FAR); have 5 | PASS |
@@ -38,9 +38,10 @@ Generated: 2026-07-04 18:49 UTC
 
 ## Manual steps (student)
 
-1. Confirm public repo URL: https://github.com/JCS1029/Intrusion-Detection-NSL-KDD-
-2. Email repo URL to examiner per `haifaUEX.pdf` course instructions.
-3. Prepare for optional oral defense using README oral defense cheat sheet.
+1. **Email repo URL to examiner** per `haifaUEX.pdf` course instructions:
+   - Repo: https://github.com/JCS1029/Intrusion-Detection-NSL-KDD-
+   - Tag: `v1.0-submission`
+2. Prepare for optional oral defense using README oral defense cheat sheet.
 
 ## QA run excerpt
 

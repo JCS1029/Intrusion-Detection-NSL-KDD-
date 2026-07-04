@@ -237,8 +237,8 @@
 - [x] Fresh venv test: install → download data → run notebook end-to-end
 - [x] Verify all PRD acceptance criteria (`prd.md` §12 Must pass)
 - [x] Verify rubric coverage (`prd.md` §11)
-- [ ] Push to public GitHub; tag `v1.0-submission`
-- [ ] Email repo URL to examiner
+- [x] Push to public GitHub; tag `v1.0-submission`
+- [ ] Email repo URL to examiner (manual — see submission checklist)
 
 ---
 
