@@ -197,3 +197,7 @@ Redundant numeric features removed (train-only Pearson):
 | NB trade-off | FAR 0.65% but recall 15% — extreme precision-over-recall bias |
 
 Artifacts: `results/experiment_metrics.csv`, `results/figures/eval/`, per-family error CSVs.
+
+### Critical evaluation (Phase 6)
+
+Claim verdicts C1–C7 documented in `docs/critical_evaluation.md`. Notebook §7 and executive summary synthesize findings for the report.

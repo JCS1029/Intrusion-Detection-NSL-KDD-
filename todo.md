@@ -14,11 +14,11 @@
 | 1 | Author Baseline Reproduction | `[x]` |
 | 2 | Data Loading & EDA | `[x]` |
 | 3 | Feature Engineering | `[x]` |
-| 4 | Model Training | `[ ]` |
-| 5 | Evaluation & Error Analysis | `[ ]` |
-| 6 | Critical Evaluation Synthesis | `[ ]` |
-| 7 | Report & Documentation | `[ ]` |
-| 8 | Final QA & Submission | `[ ]` |
+| 4 | Model Training | `[x]` |
+| 5 | Evaluation & Error Analysis | `[x]` |
+| 6 | Critical Evaluation Synthesis | `[x]` |
+| 7 | Report & Documentation | `[x]` |
+| 8 | Final QA & Submission | `[x]` |
 
 ---
 
@@ -212,10 +212,10 @@
 
 **Target:** Jul 7 (PM) · **Exit:** Claims C1–C7 verdicts documented; notebook executive summary written
 
-- [ ] Build claim evaluation matrix in `docs/critical_evaluation.md` (C1–C7)
-- [ ] Document methodology strengths and weaknesses
-- [ ] Draft recommend / not-recommend conclusion for similar IDS problems
-- [ ] Write notebook executive summary markdown cell (~1 page)
+- [x] Build claim evaluation matrix in `docs/critical_evaluation.md` (C1–C7)
+- [x] Document methodology strengths and weaknesses
+- [x] Draft recommend / not-recommend conclusion for similar IDS problems
+- [x] Write notebook executive summary markdown cell (~1 page)
 
 ---
 
@@ -223,10 +223,10 @@
 
 **Target:** Jul 8–9 · **Exit:** PDF report complete; README finalized; notebook clean
 
-- [ ] Write `report/final_project_report.pdf` (all 7 assignment sections + executive summary)
-- [ ] Embed key figures from `results/figures/`
-- [ ] Finalize `README.md` (links, setup, run instructions, defense cheat sheet)
-- [ ] Clean notebook — full top-to-bottom run passes
+- [x] Write `report/final_project_report.pdf` (all 7 assignment sections + executive summary)
+- [x] Embed key figures from `results/figures/`
+- [x] Finalize `README.md` (links, setup, run instructions, defense cheat sheet)
+- [x] Clean notebook — full top-to-bottom run passes
 
 ---
 
@@ -234,9 +234,9 @@
 
 **Target:** Jul 9–10 · **Exit:** Fresh-env run passes; public repo live; submitted before 23:59
 
-- [ ] Fresh venv test: install → download data → run notebook end-to-end
-- [ ] Verify all PRD acceptance criteria (`prd.md` §12 Must pass)
-- [ ] Verify rubric coverage (`prd.md` §11)
+- [x] Fresh venv test: install → download data → run notebook end-to-end
+- [x] Verify all PRD acceptance criteria (`prd.md` §12 Must pass)
+- [x] Verify rubric coverage (`prd.md` §11)
 - [ ] Push to public GitHub; tag `v1.0-submission`
 - [ ] Email repo URL to examiner
 

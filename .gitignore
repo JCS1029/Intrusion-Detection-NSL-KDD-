@@ -39,3 +39,6 @@ Thumbs.db
 
 # Environment secrets
 .env
+
+# QA virtualenv (Phase 8 fresh-environment test)
+.venv-qa/
