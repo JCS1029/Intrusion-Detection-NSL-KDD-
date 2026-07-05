@@ -147,8 +147,12 @@ Removing them reduces multicollinearity without large metric loss for LR/LDA.
 Cybersecurity rationale. Protocol/service/flag encode attack vectors; byte and connection counts capture volume
 anomalies; scaling puts heterogeneous counts on comparable ranges for linear models.
 
-Suggested improvements. Per-family or hierarchical labels for R2L/U2R; threshold tuning on validation data;
-audit encoding for leakage; report MCC and per-family recall alongside binary F1.
+Feature creation (exploratory). We evaluated derived candidates such as bytes_ratio = src_bytes /
+(dst_bytes + 1) for asymmetric traffic patterns; they show class separation in EDA but were not added to
+final models to preserve comparability with the authors' feature space.
+
+Suggested improvements. Per-family or hierarchical labels for R2L/U2R; log-scaled byte counts; threshold
+tuning on validation data; audit encoding for leakage; report MCC and per-family recall alongside binary F1.
 """
 
     section4 = """
@@ -181,6 +185,10 @@ guess_passwd and snmpguess show 0% recall under LR.
 
 Author baseline comparison: LR and LDA within ±0.02 of author metrics; NB and AE+LR diverge due to encoding
 and feature-set differences (documented in results/baseline_comparison.csv).
+
+Metric selection. We report Accuracy, Precision, Recall, F1, MCC, FAR, and AUC. Fβ is omitted by design:
+FAR quantifies false alarms on normal traffic, recall covers missed attacks, and LR threshold sweeps expose
+the operational FP/FN trade-off without fixing β. MCC summarizes performance under class skew.
 """
 
     section6 = """

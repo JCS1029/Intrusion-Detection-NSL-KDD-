@@ -176,15 +176,15 @@ def write_checklist(artifact_ok: dict[str, bool], notebook_ok: bool, buffer: lis
         "",
         f"Generated: {datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M UTC')}",
         "",
-        "## PRD §12 — Must pass",
+        "## Assignment requirements — Must pass",
         "",
         "| Criterion | Status |",
         "|-----------|--------|",
     ]
     lines += [f"| {c} | {s} |" for c, s in must]
-    lines += ["", "## PRD §12 — Should pass", "", "| Criterion | Status |", "|-----------|--------|"]
+    lines += ["", "## Assignment requirements — Should pass", "", "| Criterion | Status |", "|-----------|--------|"]
     lines += [f"| {c} | {s} |" for c, s in should]
-    lines += ["", "## PRD §11 — Rubric coverage", "", "| Component | Primary artifact |", "|-----------|------------------|"]
+    lines += ["", "## Grading rubric coverage", "", "| Component | Primary artifact |", "|-----------|------------------|"]
     lines += [f"| {c} | {a} |" for c, a in rubric]
     lines += [
         "",
@@ -192,7 +192,7 @@ def write_checklist(artifact_ok: dict[str, bool], notebook_ok: bool, buffer: lis
         "",
         "1. Confirm public repo URL: https://github.com/JCS1029/Intrusion-Detection-NSL-KDD-",
         "2. Email repo URL to examiner per `haifaUEX.pdf` course instructions.",
-        "3. Prepare for optional oral defense using README oral defense cheat sheet.",
+        "3. Confirm repo is public and tag v1.0-submission is present.",
         "",
         "## QA run excerpt",
         "",

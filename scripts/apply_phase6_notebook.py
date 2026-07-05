@@ -29,7 +29,7 @@ Full claim matrix and methodology critique: `docs/critical_evaluation.md`.
 
 SECTION7 = """## 7. Critical evaluation
 
-We synthesize reproduction evidence against the seven author claims (C1–C7) defined in `prd.md`, using `results/baseline_reproduction.csv` (author pipeline), `results/experiment_metrics.csv` (our pipeline), and audits in `docs/reproducibility_notes.md`. The full matrix lives in `docs/critical_evaluation.md`.
+We synthesize reproduction evidence against the seven author claims (C1–C7) from Arcos-Argudo et al. (2025), using `results/baseline_reproduction.csv` (author pipeline), `results/experiment_metrics.csv` (our pipeline), and audits in `docs/reproducibility_notes.md`. The full matrix lives in `docs/critical_evaluation.md`.
 
 ### 7.1 Claim verdicts
 

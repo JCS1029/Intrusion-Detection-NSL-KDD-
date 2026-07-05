@@ -19,17 +19,14 @@ Deliverables: Jupyter notebook (`notebooks/ids_nsl_kdd_analysis.ipynb`), PDF rep
 ## Repository layout
 
 ```
-data-science-in-cyber/
 ├── README.md
-├── prd.md / plan.md / todo.md
 ├── requirements.txt
 ├── data/raw/                     # NSL-KDD files (not committed)
 ├── notebooks/                    # primary analysis notebook
 ├── src/                          # reusable Python modules
 ├── results/                      # metrics, figures (generated)
 ├── report/                       # final PDF report
-├── docs/                         # reproducibility & critical eval notes
-└── vendor/                       # upstream author repo (reference only)
+└── docs/                         # reproducibility, critical eval, QA log
 ```
 
 ## Submission
@@ -38,7 +35,7 @@ data-science-in-cyber/
 |------|-------|
 | **Repository** | https://github.com/JCS1029/Intrusion-Detection-NSL-KDD- |
 | **Release tag** | `v1.0-submission` |
-| **QA checklist** | [`docs/submission_checklist.md`](docs/submission_checklist.md) |
+| **Checklist** | [`docs/submission_checklist.md`](docs/submission_checklist.md) |
 | **Deadline** | Friday, July 10, 2026, 23:59 |
 
 Email the repository URL to the examiner per course instructions in `haifaUEX.pdf`.
@@ -49,7 +46,7 @@ Email the repository URL to the examiner per course instructions in `haifaUEX.pd
 
 ```bash
 git clone <your-repo-url>
-cd "data science in cyber"
+cd Intrusion-Detection-NSL-KDD-
 ```
 
 ### 2. Create a virtual environment
@@ -91,9 +88,17 @@ Source: [NSL-KDD GitHub mirror](https://github.com/Jehuty4949/NSL_KDD). See `dat
 .venv\Scripts\jupyter-nbconvert.exe --to notebook --execute notebooks/ids_nsl_kdd_analysis.ipynb --output ids_nsl_kdd_analysis.ipynb --ExecutePreprocessor.timeout=1200 --ExecutePreprocessor.kernel_name=ds-cyber
 ```
 
-In Cursor/VS Code: open the notebook and select kernel **Python (ds-cyber)**.
+In VS Code: open the notebook and select kernel **Python (ds-cyber)**.
 
-### 6. Standalone scripts (optional)
+### 6. Verify submission (optional)
+
+```bash
+python scripts/run_phase8_qa.py
+```
+
+Expect `Overall QA: PASS` in `docs/qa_run_log.md`.
+
+### 7. Standalone scripts (optional)
 
 | Script | Output | Runtime (CPU) |
 |--------|--------|---------------|
@@ -110,6 +115,8 @@ In Cursor/VS Code: open the notebook and select kernel **Python (ds-cyber)**.
 | [`report/final_project_report.pdf`](report/final_project_report.pdf) | Assignment PDF — executive summary, source summary, critical evaluation, feature engineering, reproducibility, results, conclusions |
 | [`docs/critical_evaluation.md`](docs/critical_evaluation.md) | Claim matrix C1–C7 with verdicts and evidence |
 | [`docs/reproducibility_notes.md`](docs/reproducibility_notes.md) | Environment, author baseline comparison, pipeline audits |
+| [`docs/submission_checklist.md`](docs/submission_checklist.md) | Assignment requirements mapped to artifacts |
+| [`docs/qa_run_log.md`](docs/qa_run_log.md) | End-to-end notebook execution log |
 
 ## Models evaluated
 
@@ -121,7 +128,7 @@ In Cursor/VS Code: open the notebook and select kernel **Python (ds-cyber)**.
 | Autoencoder + LR | Paper reproduction |
 | Random Forest | Assignment extension |
 
-## Oral defense cheat sheet
+## Project summary
 
 **One-liner:** We reproduced all author NSL-KDD metrics, then showed several headline claims fail under strict preprocessing or rare-attack scrutiny.
 
@@ -147,31 +154,12 @@ In Cursor/VS Code: open the notebook and select kernel **Python (ds-cyber)**.
 | C6 — FAR essential | **Supported** — NB Acc 0.51 vs FAR 0.65% |
 | C7 — Byte-level reproducibility | **Partial** — Table 4/5 matched; hidden CSV ETL |
 
-### Likely examiner questions
-
-1. **Why do your AE+LR numbers differ from the paper?** Different encoding (train-only 106 vs author concat 119 features), raw `.txt` vs bundled CSVs, seven correlated features dropped.
-2. **Did you reproduce the authors?** Yes — all eight model/regime rows match Tables 4–5 within ±0.02 via `scripts/run_phase1_baseline.py`.
-3. **Biggest weakness of the paper?** Binary collapse hides R2L/U2R failure (recall ~8–10%); legacy dataset; encoding leakage in author code.
-4. **Would you deploy this?** No — use as benchmark only; report per-attack-family recall and tune thresholds operationally.
-
 ## Author replication (reference)
 
 Upstream NSL-KDD notebook: `vendor/IDS-KDD-CICIDS2017/data/BACK-nsl-kdd-github.ipynb`  
 (Author README incorrectly lists `notebooks/`.)
 
 Bundled preprocessed CSVs: `vendor/IDS-KDD-CICIDS2017/data/KDDTrain_cleaned_binary.csv`.
-
-## Project status
-
-| Component | Status |
-|-----------|--------|
-| Environment & data | Complete |
-| Author baseline reproduction | Complete |
-| Notebook (EDA → critical eval) | Complete |
-| PDF report | Complete |
-| QA & submission | Complete |
-
-Track tasks in [`todo.md`](./todo.md). Planning docs: [`prd.md`](./prd.md), [`plan.md`](./plan.md).
 
 ## References
 
