@@ -40,5 +40,5 @@ Thumbs.db
 # Environment secrets
 .env
 
-# QA virtualenv (Phase 8 fresh-environment test)
+# Leftover QA virtualenv (safe to delete locally)
 .venv-qa/

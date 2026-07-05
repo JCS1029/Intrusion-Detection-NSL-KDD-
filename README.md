@@ -26,7 +26,7 @@ Deliverables: Jupyter notebook (`notebooks/ids_nsl_kdd_analysis.ipynb`), PDF rep
 ├── src/                          # reusable Python modules
 ├── results/                      # metrics, figures (generated)
 ├── report/                       # final PDF report
-└── docs/                         # reproducibility, critical eval, QA log
+└── docs/                         # reproducibility notes, critical eval, checklist
 ```
 
 ## Submission
@@ -59,8 +59,6 @@ python -m venv .venv
 source .venv/bin/activate
 ```
 
-Scripts under `scripts/` auto-switch to `.venv` when present.
-
 ### 3. Install dependencies
 
 ```bash
@@ -90,23 +88,7 @@ Source: [NSL-KDD GitHub mirror](https://github.com/Jehuty4949/NSL_KDD). See `dat
 
 In VS Code: open the notebook and select kernel **Python (ds-cyber)**.
 
-### 6. Verify submission (optional)
-
-```bash
-python scripts/run_phase8_qa.py
-```
-
-Expect `Overall QA: PASS` in `docs/qa_run_log.md`.
-
-### 7. Standalone scripts (optional)
-
-| Script | Output | Runtime (CPU) |
-|--------|--------|---------------|
-| `python scripts/run_phase1_baseline.py` | `results/baseline_reproduction.csv` | ~6 min |
-| `python scripts/run_phase2_eda.py` | `results/figures/eda/` | ~2 min |
-| `python scripts/run_phase4_training.py` | `results/models/`, `results/model_training.csv` | ~5 min |
-| `python scripts/run_phase5_eval.py` | `results/experiment_metrics.csv`, eval figures | ~1 min |
-| `python scripts/run_phase7_report.py` | `report/final_project_report.pdf` | ~30 s |
+Reusable pipeline code lives in `src/` (data loading, preprocessing, models, evaluation).
 
 ## Report and documentation
 
@@ -115,8 +97,7 @@ Expect `Overall QA: PASS` in `docs/qa_run_log.md`.
 | [`report/final_project_report.pdf`](report/final_project_report.pdf) | Assignment PDF — executive summary, source summary, critical evaluation, feature engineering, reproducibility, results, conclusions |
 | [`docs/critical_evaluation.md`](docs/critical_evaluation.md) | Claim matrix C1–C7 with verdicts and evidence |
 | [`docs/reproducibility_notes.md`](docs/reproducibility_notes.md) | Environment, author baseline comparison, pipeline audits |
-| [`docs/submission_checklist.md`](docs/submission_checklist.md) | Assignment requirements mapped to artifacts |
-| [`docs/qa_run_log.md`](docs/qa_run_log.md) | End-to-end notebook execution log |
+| [`docs/submission_checklist.md`](docs/submission_checklist.md) | Pre-submission checklist |
 
 ## Models evaluated
 

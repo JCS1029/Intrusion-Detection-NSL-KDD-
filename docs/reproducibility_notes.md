@@ -1,8 +1,8 @@
 # Reproducibility Notes
 
-Chronological log of environment setup, author baseline runs, and pipeline audits.
+Log of environment setup, author baseline runs, and pipeline audits.
 
-## Phase 0 — Environment (2026-07-04)
+## Environment setup (2026-07-04)
 
 ### Host
 
@@ -24,7 +24,7 @@ Chronological log of environment setup, author baseline runs, and pipeline audit
 | matplotlib | 3.11.0 |
 | seaborn | 0.13.2 |
 
-**Note:** Paper reports Python 3.12.11, TensorFlow 2.20.0, scikit-learn 1.7.2. Minor version drift may affect AE+LR metrics slightly — see Phase 1 comparison.
+**Note:** Paper reports Python 3.12.11, TensorFlow 2.20.0, scikit-learn 1.7.2. Minor version drift may affect AE+LR metrics slightly — see author baseline comparison below.
 
 ### Author replication repo
 
@@ -50,16 +50,15 @@ Source: https://github.com/Jehuty4949/NSL_KDD
 
 ---
 
-## Phase 1 — Author Baseline (2026-07-04)
+## Author baseline reproduction (2026-07-04)
 
 ### Execution approach
 
 | Item | Value |
 |------|-------|
-| Runner | `scripts/run_phase1_baseline.py` |
+| Implementation | Notebook §4 + logic mirrored from `vendor/.../data/BACK-nsl-kdd-github.ipynb` |
 | Environment | Project `.venv/` (not author Conda env) |
 | Data used | Author bundled CSVs (not raw `.txt`) |
-| Logic source | `vendor/.../data/BACK-nsl-kdd-github.ipynb` |
 
 ### Preprocessing checklist (as implemented in author notebook)
 
@@ -168,7 +167,7 @@ Full metrics: `results/baseline_reproduction.csv`
 Redundant numeric features removed (train-only Pearson):  
 `dst_host_rerror_rate`, `dst_host_srv_rerror_rate`, `dst_host_srv_serror_rate`, `num_root`, `rerror_rate`, `srv_rerror_rate`, `srv_serror_rate`
 
-### Phase 1 conclusion
+### Author baseline conclusion
 
 **Reproduction succeeded.** All eight model/regime combinations match paper Tables 4–5 within tolerance. The replication package is functional when using bundled CSVs and mirroring notebook logic. The main reproducibility gaps are undocumented CSV preprocessing and the train+test concat before one-hot encoding.
 
@@ -186,7 +185,7 @@ Redundant numeric features removed (train-only Pearson):
 
 **Vs author baseline:** LR and LDA within ±0.02; NB and AE+LR diverge (expected — different encoding/feature set and raw vs cleaned CSVs). RF has no author baseline (our extension).
 
-### Evaluation summary (Phase 5)
+### Evaluation summary
 
 | Finding | Detail |
 |---------|--------|
@@ -198,6 +197,6 @@ Redundant numeric features removed (train-only Pearson):
 
 Artifacts: `results/experiment_metrics.csv`, `results/figures/eval/`, per-family error CSVs.
 
-### Critical evaluation (Phase 6)
+### Critical evaluation
 
 Claim verdicts C1–C7 documented in `docs/critical_evaluation.md`. Notebook §7 and executive summary synthesize findings for the report.
